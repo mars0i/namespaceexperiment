@@ -8,11 +8,11 @@
   (defrecord Data [x y])
 
   (ns namespaceexperiment.core
-    (:require [namespaceexperiment.data :as d]))
-  ;(:import [namespaceexperiment.data Data]))
+    (:require [namespaceexperiment.data :as d])) ; WORKS
+  ;(:import [namespaceexperiment.data Data]))    ; works
 
-  ;(require [namespaceexperiment.data :as d])
-  (import [namespaceexperiment.data Data])
+  ;(require [namespaceexperiment.data :as d])    ; DOESN'T WORK: class not found
+  (import [namespaceexperiment.data Data])       ; works too
 
   (defrecord Foo [x])
 
